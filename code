@@ -1,0 +1,123 @@
+using DocumentFormat.OpenXml;
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Wordprocessing;
+using Dadata;
+using Dadata.Model;
+
+namespace LR_TP_9
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        private static Dictionary<string, BookmarkEnd> FindBookmarks(OpenXmlElement documentPart, Dictionary<string, BookmarkEnd> outs = null, Dictionary<string, string> bStartWithNoEnds = null)
+        {
+            if (outs == null) { outs = new Dictionary<string, BookmarkEnd>(); }
+            if (bStartWithNoEnds == null) { bStartWithNoEnds = new Dictionary<string, string>(); }
+
+           
+            foreach (var docElement in documentPart.Elements())
+            {
+                
+                if (docElement is BookmarkStart)
+                {
+                    var bookmarkStart = docElement as BookmarkStart;
+                    
+                    bStartWithNoEnds.Add(bookmarkStart.Id, bookmarkStart.Name);
+                }
+
+                
+                if (docElement is BookmarkEnd)
+                {
+                    var bookmarkEnd = docElement as BookmarkEnd;
+                    foreach (var startName in bStartWithNoEnds)
+                    {
+                       
+                        if (bookmarkEnd.Id == startName.Key)
+                            
+                            outs.Add(startName.Value, bookmarkEnd);
+                    }
+                }
+                
+                FindBookmarks(docElement, outs, bStartWithNoEnds);
+            }
+
+            return outs;
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                byte[] textByteArray = File.ReadAllBytes(@"doc.docx");
+               
+                DateTime thisDay = DateTime.Now;
+                string[] data = new string[8] { thisDay.ToString(), textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text };
+                
+                using (MemoryStream stream = new MemoryStream())
+                {
+                   
+                    stream.Write(textByteArray, 0, textByteArray.Length);
+                    
+                    using (WordprocessingDocument doc = WordprocessingDocument.Open(stream, true))
+                    {
+                        
+                        var bookMarks = FindBookmarks(doc.MainDocumentPart.Document);
+
+                        int i = 0;
+                        foreach (var end in bookMarks)
+                        {
+                            
+                            if (end.Key != "date" && end.Key != "seller" && end.Key != "buyer"  && end.Key !="seller_address" && end.Key != "buyer_address" && end.Key != "goods" && end.Key !="seller_name"  && end.Key != "buyer_name" ) continue;
+                            
+                            var textElement = new Text(data[i].ToString());
+                            
+                            var runElement = new Run(textElement);
+                            end.Value.InsertAfterSelf(runElement);
+                            i++;
+                        }
+                    }
+
+                   
+                    File.WriteAllBytes(@"C:\Users\asus\Desktop\test.docx", stream.ToArray());
+                    MessageBox.Show(String.Format("Создан новый файл. Расположение: {0}", @"C:\Users\asus\Desktop\test.docx"));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(String.Format("Во время выполнения программы произошла ошибка! Текст ошибки: {0}", ex.Message));
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var token = "196779c06ccd27eef04fd236516796cc154ab209";
+            var secret = "a2c5054ec20fe81296b96fddb0f4c00cd1c9a5e8";
+            var api = new CleanClient(token, secret);
+            var address = api.Clean<Address>(textBox3.Text);
+            string outStr = String.Format("{0}", address.result);
+            textBox3.Text = outStr;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var token = "196779c06ccd27eef04fd236516796cc154ab209";
+            var secret = "a2c5054ec20fe81296b96fddb0f4c00cd1c9a5e8";
+            var api = new CleanClient(token, secret);
+            var address = api.Clean<Address>(textBox4.Text);
+            string outStr = String.Format("{0}", address.result);
+            textBox4.Text = outStr;
+        }
+    }
+}
