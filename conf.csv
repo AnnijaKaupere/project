@@ -1,4 +1,4 @@
-
+1.1.1.1 - Device Unreachable/SSH not enabled
 
 ----------------------IP_ADDRESS: 10.70.100.51----------------------
 
@@ -21,11 +21,11 @@ Inactive-image: flash://system/images/image1.bin
 -----interfaces counters info-----
       Port       InUcastPkts  InMcastPkts  InBcastPkts    InOctets   
 ---------------- ------------ ------------ ------------ ------------ 
-    gi1/0/7         519865        8174         186        90592159   
+    gi1/0/7         520671        8189         186        90762873   
 
       Port       OutUcastPkts OutMcastPkts OutBcastPkts  OutOctets   
 ---------------- ------------ ------------ ------------ ------------ 
-    gi1/0/7        1134833       647965      1059137     1367466487  
+    gi1/0/7        1135618       648851      1060376     1367972473  
 
 Alignment Errors: 0
 FCS Errors: 0
@@ -43,11 +43,11 @@ Received Pause Frames: 0
 Transmitted Pause Frames: 0
       Port       InUcastPkts  InMcastPkts  InBcastPkts    InOctets   
 ---------------- ------------ ------------ ------------ ------------ 
-    gi1/0/8        1153877       700116      1110404     1389311744  
+    gi1/0/8        1154816       701064      1111712     1389851412  
 
       Port       OutUcastPkts OutMcastPkts OutBcastPkts  OutOctets   
 ---------------- ------------ ------------ ------------ ------------ 
-    gi1/0/8         535733       13688         289        97362380   
+    gi1/0/8         536702       13706         289        97587767   
 
 Alignment Errors: 0
 FCS Errors: 0
@@ -72,7 +72,7 @@ TP - Two Ports MAC Relay; S - S-VLAN; C - C-VLAN; O - Other
 
   Port        Device ID        Port ID       System Name    Capabilities  TTL  
 --------- ----------------- ------------- ----------------- ------------ ----- 
-gi1/0/8   e4:5a:d4:2a:09:40   gi1/0/35    eltex_local_1.350     B, R      96   
+gi1/0/8   e4:5a:d4:2a:09:40   gi1/0/35    eltex_local_1.350     B, R      113  
                                                   0                            
 
 
