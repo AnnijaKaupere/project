@@ -1,6 +1,6 @@
 
 
-----------------------IP_ADDRESS: 10.70.100.51----------------------
+----------------------IP_ADDRESS: 10.10.10.10----------------------
 
 -----version info-----
 Active-image: flash://system/images/_image1.bin
@@ -21,11 +21,11 @@ Inactive-image: flash://system/images/image1.bin
 -----interfaces counters info-----
       Port       InUcastPkts  InMcastPkts  InBcastPkts    InOctets   
 ---------------- ------------ ------------ ------------ ------------ 
-    gi1/0/7         518291        8156         185        90229065   
+    gi1/0/7         518746        8164         185        90364243   
 
       Port       OutUcastPkts OutMcastPkts OutBcastPkts  OutOctets   
 ---------------- ------------ ------------ ------------ ------------ 
-    gi1/0/7        1133181       646652      1057310     1366517038  
+    gi1/0/7        1133683       646981      1057700     1366804125  
 
 Alignment Errors: 0
 FCS Errors: 0
@@ -43,11 +43,11 @@ Received Pause Frames: 0
 Transmitted Pause Frames: 0
       Port       InUcastPkts  InMcastPkts  InBcastPkts    InOctets   
 ---------------- ------------ ------------ ------------ ------------ 
-    gi1/0/8        1151791       698624      1108519     1388302010  
+    gi1/0/8        1152423       698963      1108917     1388591912  
 
       Port       OutUcastPkts OutMcastPkts OutBcastPkts  OutOctets   
 ---------------- ------------ ------------ ------------ ------------ 
-    gi1/0/8         533690       13658         288        96842087   
+    gi1/0/8         534292       13667         288        97026379   
 
 Alignment Errors: 0
 FCS Errors: 0
@@ -72,7 +72,7 @@ TP - Two Ports MAC Relay; S - S-VLAN; C - C-VLAN; O - Other
 
   Port        Device ID        Port ID       System Name    Capabilities  TTL  
 --------- ----------------- ------------- ----------------- ------------ ----- 
-gi1/0/8   e4:5a:d4:2a:09:40   gi1/0/35    eltex_local_1.350     B, R      93   
+gi1/0/8   e4:5a:d4:2a:09:40   gi1/0/35    eltex_local_1.350     B, R      105  
                                                   0                            
 
 
