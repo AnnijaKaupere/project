@@ -21,11 +21,11 @@ Inactive-image: flash://system/images/image1.bin
 -----interfaces counters info-----
       Port       InUcastPkts  InMcastPkts  InBcastPkts    InOctets   
 ---------------- ------------ ------------ ------------ ------------ 
-    gi1/0/7         568908        8933         195       102047236   
+    gi1/0/7         571665        8962         196       102484702   
 
       Port       OutUcastPkts OutMcastPkts OutBcastPkts  OutOctets   
 ---------------- ------------ ------------ ------------ ------------ 
-    gi1/0/7        1218289       684226      1107895     1452663420  
+    gi1/0/7        1226704       685312      1109293     1461949382  
 
 Alignment Errors: 0
 FCS Errors: 0
@@ -43,11 +43,11 @@ Received Pause Frames: 0
 Transmitted Pause Frames: 0
       Port       InUcastPkts  InMcastPkts  InBcastPkts    InOctets   
 ---------------- ------------ ------------ ------------ ------------ 
-    gi1/0/8        1239413       738493      1161218     1475657547  
+    gi1/0/8        1247980       739652      1162679     1485008976  
 
       Port       OutUcastPkts OutMcastPkts OutBcastPkts  OutOctets   
 ---------------- ------------ ------------ ------------ ------------ 
-    gi1/0/8         586879       14688         303       109717387   
+    gi1/0/8         589799       14725         304       110217425   
 
 Alignment Errors: 0
 FCS Errors: 0
