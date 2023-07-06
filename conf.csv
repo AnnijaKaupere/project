@@ -21,11 +21,11 @@ Inactive-image: flash://system/images/image1.bin
 -----interfaces counters info-----
       Port       InUcastPkts  InMcastPkts  InBcastPkts    InOctets   
 ---------------- ------------ ------------ ------------ ------------ 
-    gi1/0/7         566461        8891         195       101522354   
+    gi1/0/7         568908        8933         195       102047236   
 
       Port       OutUcastPkts OutMcastPkts OutBcastPkts  OutOctets   
 ---------------- ------------ ------------ ------------ ------------ 
-    gi1/0/7        1215613       682405      1105227     1451120567  
+    gi1/0/7        1218289       684226      1107895     1452663420  
 
 Alignment Errors: 0
 FCS Errors: 0
@@ -43,11 +43,11 @@ Received Pause Frames: 0
 Transmitted Pause Frames: 0
       Port       InUcastPkts  InMcastPkts  InBcastPkts    InOctets   
 ---------------- ------------ ------------ ------------ ------------ 
-    gi1/0/8        1236580       736556      1158437     1474055272  
+    gi1/0/8        1239413       738493      1161218     1475657547  
 
       Port       OutUcastPkts OutMcastPkts OutBcastPkts  OutOctets   
 ---------------- ------------ ------------ ------------ ------------ 
-    gi1/0/8         584275       14634         302       109129422   
+    gi1/0/8         586879       14688         303       109717387   
 
 Alignment Errors: 0
 FCS Errors: 0
@@ -72,7 +72,7 @@ TP - Two Ports MAC Relay; S - S-VLAN; C - C-VLAN; O - Other
 
   Port        Device ID        Port ID       System Name    Capabilities  TTL  
 --------- ----------------- ------------- ----------------- ------------ ----- 
-gi1/0/8   e4:5a:d4:2a:09:40   gi1/0/35    eltex_local_1.350     B, R      119  
+gi1/0/8   e4:5a:d4:2a:09:40   gi1/0/35    eltex_local_1.350     B, R      102  
                                                   0                            
 
 
