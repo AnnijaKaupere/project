@@ -1,5 +1,0 @@
-
-
-----------------------IP_ADDRESS: 13----------------------
-Device Unreachable/SSH not enabled
-
